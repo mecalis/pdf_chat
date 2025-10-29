@@ -19,6 +19,7 @@ def main():
     st.write("2: A megjelenő szövegmezőbe bemásolod valamelyik kérdés javaslatot, vagy kitalálsz egy sajátot.")
     st.write("Kérdés javaslat1: Ez a szöveg egy elektronikus számla. Keresd meg benne a kiszámlázott tételek nevét, darabszámát és az árát.")
     st.write("Kérdés javaslat2: Ez a szöveg egy elektronikus számla. Keresd meg benne a számla dátumát, a kiszámlázott tételek nevét, darabszámát és az árát. Az értékeket az alábbi formátumban add vissza, tételenként: számla dátuma - megnevezés - mennyiség - egységár")
+    st.write("Kérdés javaslat3: Ez a szöveg egy elektronikus számla. Keresd meg benne a számla dátumát, a kiszámlázott tételek nevét, darabszámát és az árát. Az értékeket az alábbi formátumban add vissza, tételenként: számla dátuma - megnevezés - mennyiség - egységár. Semmilyen más szöveget ne írj ki, csak a megadott formátum szerint a tételek listáját!")
     openai_api_key = st.secrets["OPENAI_API_KEY"]
     # upload file
     pdf = st.file_uploader("Tölts fel ide egy PDF-et!", type="pdf")
@@ -60,6 +61,7 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
 
