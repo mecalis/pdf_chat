@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 from langchain_classic.callbacks.manager import get_openai_callback
 import os, certifi
 
-openai_api_key = st.secrets["openai"]["api_key"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 def main():
     st.set_page_config(page_title="Ask your PDF")
@@ -55,3 +55,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
