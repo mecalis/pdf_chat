@@ -14,7 +14,7 @@ openai_api_key = st.secrets["OPENAI_API_KEY"]
 def main():
     st.set_page_config(page_title="Ask your PDF")
     st.header("Ask your PDF 💬")
-    openai_api_key = st.secrets["openai"]["api_key"]
+    openai_api_key = st.secrets["OPENAI_API_KEY"]
     # upload file
     pdf = st.file_uploader("Upload your PDF", type="pdf")
     
@@ -55,4 +55,5 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
